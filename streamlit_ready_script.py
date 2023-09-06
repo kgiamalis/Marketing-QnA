@@ -49,7 +49,7 @@ from langchain.document_loaders import CSVLoader
 from langchain.vectorstores import DocArrayInMemorySearch
 
 #load file
-file = 'C:\\Users\\30698\Desktop\\test\\cleaned_updated_manual_sample.csv'
+file = 'cleaned_updated_manual_sample.csv'
 loader = CSVLoader(file_path=file, encoding='utf-8')
 
 #Convert into vector
