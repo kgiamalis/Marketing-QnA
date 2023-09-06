@@ -22,7 +22,7 @@ import os
 import openai
 
 # Fetch the API key from environment variables
-api_key = os.environ.get("OPENAI_API_KEY")
+api_key = st.secrets["openai"]["api_key"]
 
 # Check if the API key exists
 if not api_key:
