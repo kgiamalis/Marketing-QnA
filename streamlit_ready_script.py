@@ -12,7 +12,7 @@ st.write("- What are the advantages of Nero?")
 st.write("- Who should read this?")
 st.write("- What are the processes of Nero?")
 st.write("- What is Nero Master?")
-st.write("- Give me a tip")
+st.write("- Give me a list of reasons why Marketing should become Agile?")
 
 # User Input for the question
 query = st.text_input("Enter your question:", key="unique_query_key")
