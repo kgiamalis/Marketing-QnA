@@ -17,12 +17,15 @@ st.write("- Give me a list of reasons why Marketing should become Agile?")
 # User Input for the question
 query = st.text_input("Enter your question:", key="unique_query_key")
 
+
 #Login to OpenAI using a file.
 import os
 import openai
 
 # Fetch the API key from environment variables
 api_key = st.secrets["openai"]["openai_api_key"]
+
+os.environ["OPENAI_API_KEY"] = api_key
 
 # Check if the API key exists
 if not api_key:
