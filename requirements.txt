@@ -1,3 +1,4 @@
+docarray
 langchain
 openai
 tiktoken
