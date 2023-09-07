@@ -68,15 +68,11 @@ response = index.query(query)
 st.write(response)
 
 # Display "Try these questions" as bold text
-st.text("Try these questions")
-
-# List of questions
-questions = [
-    "What is Nero?",
-    "Why is it called Nero?",
-    "What are the advantages of Nero?",
-    "Who should read this?",
-    "What are the processes of Nero?",
-    "What is Nero Master?",
-    "Give me a list of reasons why Marketing should become Agile?"
-]
+st.text("Try these questions: 
+        - "What is Nero?",
+        - "Why is it called Nero?",
+        - "What are the advantages of Nero?",
+        - "Who should read this?",
+        - "What are the processes of Nero?",
+        - "What is Nero Master?",
+        - "Give me a list of reasons why Marketing should become Agile?"")
