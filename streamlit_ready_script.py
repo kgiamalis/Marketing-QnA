@@ -43,8 +43,6 @@ query = st.text_input("Enter your question:", key="unique_query_key")
 # Display the hosted image from Cloudinary in the center of the UI
 st.image("https://asset.cloudinary.com/dqp8dgwvy/4a8f29fcc4b30247a72d76248854f243", use_column_width=True)
 
-# Add a clickable link to Amazon with an icon
-st.markdown("[[Buy the book from Amazon]](https://www.amazon.de/-/en/Konstantinos-Giamalis/dp/6180023735/?&_encoding=UTF8&tag=kgiamalis-21&linkCode=ur2&linkId=ba4eaff10ab7d658db964e48125abc7d&camp=1638&creative=6742)", unsafe_allow_html=True)
 
 # List of questions
 questions = [
@@ -56,10 +54,6 @@ questions = [
     "What is Nero Master?",
     "Give me a list of reasons why Marketing should become Agile?"
 ]
-
-# Loop through the questions and display them
-for q in questions:
-    st.markdown(f"### {q}")  # Display the question as a header
 
 # Fetch the API key from Streamlit secrets
 api_key = st.secrets["openai"]["openai_api_key"]
