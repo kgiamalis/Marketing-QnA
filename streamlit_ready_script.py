@@ -52,11 +52,14 @@ llm_model = "gpt-3.5-turbo" if current_date > target_date else "gpt-3.5-turbo-03
 file = 'C:\\Users\\30698\\Desktop\\test\\cleaned_updated_manual_sample.csv'
 loader = CSVLoader(file_path=file, encoding='utf-8')
 
+# Fetch the API key from Streamlit's secrets
 api_key = st.secrets["openai"]["openai_api_key"]
+
+# Set the OpenAI API key as an environment variable
+os.environ["OPENAI_API_KEY"] = api_key
 
 index = VectorstoreIndexCreator(
     vectorstore_cls=DocArrayInMemorySearch,
-    openai_api_key=api_key  # passing the API key directly
 ).from_loaders([loader])
 
 # Generate response
