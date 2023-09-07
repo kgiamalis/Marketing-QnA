@@ -36,17 +36,6 @@ st.write("Provide your question below and get answers based on the book: Agile M
 # User Input for the question
 query = st.text_input("Enter your question:", key="unique_query_key")
 
-# List of questions
-questions = [
-    "What is Nero?",
-    "Why is it called Nero?",
-    "What are the advantages of Nero?",
-    "Who should read this?",
-    "What are the processes of Nero?",
-    "What is Nero Master?",
-    "Give me a list of reasons why Marketing should become Agile?"
-]
-
 # Fetch the API key from Streamlit secrets
 api_key = st.secrets["openai"]["openai_api_key"]
 
@@ -77,3 +66,17 @@ index = VectorstoreIndexCreator(
 response = index.query(query)
 
 st.write(response)
+
+# Display "Try these questions" as bold text
+st.text("Try these questions")
+
+# List of questions
+questions = [
+    "What is Nero?",
+    "Why is it called Nero?",
+    "What are the advantages of Nero?",
+    "Who should read this?",
+    "What are the processes of Nero?",
+    "What is Nero Master?",
+    "Give me a list of reasons why Marketing should become Agile?"
+]
