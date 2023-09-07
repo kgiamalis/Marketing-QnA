@@ -1,31 +1,25 @@
-
 import streamlit as st
 
-# Streamlit app title and introduction
-st.title("Agile Marketing Q&A App")
-st.write("Provide your question below and get answers from the book: Agile Marketing -from waterfall to water flow-.")
+def load_css(file_name):
+    with open(file_name, 'r') as file:
+        return file.read()
 
-st.markdown("**Sample questions:**")
-st.write("- What is Nero?")
-st.write("- Why is it called Nero?")
-st.write("- What are the advantages of Nero?")
-st.write("- Who should read this?")
-st.write("- What are the processes of Nero?")
-st.write("- What is Nero Master?")
-st.write("- Give me a list of reasons why Marketing should become Agile?")
+custom_css = load_css("styles.css")
+st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
+
+# Streamlit app title and introduction
+st.title("Agile Marketing Q&A")
+st.write("Provide your question below and get answers based on the book:/n Agile Marketing -from waterfall to water flow-.")
 
 # User Input for the question
 query = st.text_input("Enter your question:", key="unique_query_key")
-
 
 #Login to OpenAI using a file.
 import os
 import openai
 
 # Fetch the API key from environment variables
-api_key = st.secrets["openai"]["openai_api_key"]
-
-os.environ["OPENAI_API_KEY"] = api_key
+api_key = os.environ.get("OPENAI_API_KEY")
 
 # Check if the API key exists
 if not api_key:
@@ -52,7 +46,7 @@ from langchain.document_loaders import CSVLoader
 from langchain.vectorstores import DocArrayInMemorySearch
 
 #load file
-file = 'cleaned_updated_manual_sample.csv'
+file = 'C:\\Users\\30698\Desktop\\test\\cleaned_updated_manual_sample.csv'
 loader = CSVLoader(file_path=file, encoding='utf-8')
 
 #Convert into vector
@@ -67,5 +61,3 @@ index = VectorstoreIndexCreator(
 response = index.query(query)
 
 st.write(response)
-
-
