@@ -35,10 +35,8 @@ questions = ["What is Nero?", "Why is it called Nero?","What are the advantages 
 
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
-st.write("Provide your question below and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
-st.text('\n'.join(questions))
-
-
+st.write("Ask your question and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
+st.write('\n'.join(questions))
 
 # User Input for the question
 query = st.text_input("Enter your question:", key="unique_query_key")
