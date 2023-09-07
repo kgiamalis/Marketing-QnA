@@ -26,6 +26,10 @@ body {
     color: white;
     border: none;
 }
+/* Make the questions smaller in font size */
+.question-text {
+    font-size: 0.9em;
+}
 """
 st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
