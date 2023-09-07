@@ -35,7 +35,7 @@ st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 st.title("Agile Marketing Q&A")
 st.write("Ask your question and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
 st.write("What is Nero?",'\n'
-             "Why is it called Nero?","\n"
+             "Why is it called Nero?",'\n'
              "What are the advantages of Nero?",'\n'
              "Who should read this?",'\n'
              "What are the processes of Nero?",'\n'
@@ -43,7 +43,7 @@ st.write("What is Nero?",'\n'
              "Give me a list of reasons why Marketing should become Agile?")
 
 # User Input for the question
-query = st.text_input("Enter your question:", key="unique_query_key")
+query = st.text_input("Ask your question:", key="unique_query_key")
 
 # Fetch the API key from Streamlit secrets
 api_key = st.secrets["openai"]["openai_api_key"]
