@@ -36,7 +36,7 @@ questions = ["What is Nero?", "Why is it called Nero?","What are the advantages 
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
 st.write("Provide your question below and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
-    st.text('\n'.join(questions))
+st.text('\n'.join(questions))
 
 
 
