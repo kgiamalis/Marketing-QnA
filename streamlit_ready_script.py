@@ -26,23 +26,15 @@ body {
     color: white;
     border: none;
 }
-/* Make the questions smaller in font size */
-.question-text {
-    font-size: 0.9em;
-}
 """
 st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
-st.write("Provide your question below and get answers based on the book:\n Agile Marketing -from waterfall to water flow-.")
+st.write("Provide your question below and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
 
 # User Input for the question
 query = st.text_input("Enter your question:", key="unique_query_key")
-
-# Display the hosted image from Cloudinary in the center of the UI
-st.image("https://asset.cloudinary.com/dqp8dgwvy/4a8f29fcc4b30247a72d76248854f243", use_column_width=True)
-
 
 # List of questions
 questions = [
