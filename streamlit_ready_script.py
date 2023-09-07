@@ -31,15 +31,7 @@ body {
 """
 st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
-questions = [
-        "What is Nero?",
-        "Why is it called Nero?",
-        "What are the advantages of Nero?",
-        "Who should read this?",
-        "What are the processes of Nero?",
-        "What is Nero Master?",
-        "Give me a list of reasons why Marketing should become Agile?"
-    ]
+questions = ["What is Nero?", "Why is it called Nero?","What are the advantages of Nero?","Who should read this?","What are the processes of Nero?","What is Nero Master?","Give me a list of reasons why Marketing should become Agile?"]
 
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
