@@ -31,12 +31,12 @@ body {
 """
 st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
-questions = ["What is Nero?",/n
-             "Why is it called Nero?",
-             "What are the advantages of Nero?",
-             "Who should read this?",
-             "What are the processes of Nero?",
-             "What is Nero Master?",
+questions = ["What is Nero?",'\n'
+             "Why is it called Nero?",'\n'
+             "What are the advantages of Nero?",'\n'
+             "Who should read this?",'\n'
+             "What are the processes of Nero?",'\n'
+             "What is Nero Master?",'\n'
              "Give me a list of reasons why Marketing should become Agile?"]
 
 # Streamlit app title and introduction
