@@ -44,10 +44,7 @@ query = st.text_input("Enter your question:", key="unique_query_key")
 st.image("https://asset.cloudinary.com/dqp8dgwvy/4a8f29fcc4b30247a72d76248854f243", use_column_width=True)
 
 # Add a clickable link to Amazon with an icon
-st.markdown("[![Buy on Amazon]](https://www.amazon.de/-/en/Konstantinos-Giamalis/dp/6180023735/?&_encoding=UTF8&tag=kgiamalis-21&linkCode=ur2&linkId=ba4eaff10ab7d658db964e48125abc7d&camp=1638&creative=6742) **Buy on Amazonn**", unsafe_allow_html=True)
-
-# Display a header for the questions section
-st.markdown("## Try these questions")
+st.markdown("[[Buy the book from Amazon]](https://www.amazon.de/-/en/Konstantinos-Giamalis/dp/6180023735/?&_encoding=UTF8&tag=kgiamalis-21&linkCode=ur2&linkId=ba4eaff10ab7d658db964e48125abc7d&camp=1638&creative=6742)", unsafe_allow_html=True)
 
 # List of questions
 questions = [
