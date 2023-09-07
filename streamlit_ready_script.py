@@ -31,7 +31,7 @@ body {
 """
 st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
-questions = ["What is Nero?", 
+questions = ["What is Nero?",/n
              "Why is it called Nero?",
              "What are the advantages of Nero?",
              "Who should read this?",
