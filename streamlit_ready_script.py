@@ -34,14 +34,14 @@ st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
 st.write("Provide your question below and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
-st.write("
+st.write(
         "What is Nero?",
         "Why is it called Nero?",
         "What are the advantages of Nero?",
         "Who should read this?",
         "What are the processes of Nero?",
         "What is Nero Master?",
-        "Give me a list of reasons why Marketing should become Agile?"")
+        "Give me a list of reasons why Marketing should become Agile?")
 
 
 # User Input for the question
