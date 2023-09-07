@@ -34,19 +34,15 @@ st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
 st.write("Provide your question below and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
-st.write(questions = [
+st.write("
         "What is Nero?",
         "Why is it called Nero?",
         "What are the advantages of Nero?",
         "Who should read this?",
         "What are the processes of Nero?",
         "What is Nero Master?",
-        "Give me a list of reasons why Marketing should become Agile?"
-    ]
-    
-    # Randomly select one question from the list to display
-    displayed_question = random.choice(questions)
-    st.text(displayed_question))
+        "Give me a list of reasons why Marketing should become Agile?"")
+
 
 # User Input for the question
 query = st.text_input("Enter your question:", key="unique_query_key")
