@@ -1,9 +1,6 @@
 import streamlit as st
 import os
 import openai
-import datetime
-import time
-import random
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import CSVLoader
