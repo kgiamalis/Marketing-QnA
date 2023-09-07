@@ -48,8 +48,8 @@ current_date = datetime.datetime.now().date()
 target_date = datetime.date(2024, 6, 12)
 llm_model = "gpt-3.5-turbo" if current_date > target_date else "gpt-3.5-turbo-0301"
 
-# Load your file (update the path as needed)
-file = 'C:\\Users\\30698\\Desktop\\test\\cleaned_updated_manual_sample.csv'
+# Load your file
+file = 'cleaned_updated_manual_sample.csv'
 loader = CSVLoader(file_path=file, encoding='utf-8')
 
 # Fetch the API key from Streamlit's secrets
