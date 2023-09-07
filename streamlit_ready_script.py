@@ -2,6 +2,8 @@ import streamlit as st
 import os
 import openai
 import datetime
+import time
+import random
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import CSVLoader
@@ -67,12 +69,23 @@ response = index.query(query)
 
 st.write(response)
 
-# Display "Try these questions" as bold text
-st.text("Try these questions: 
-        - "What is Nero?",
-        - "Why is it called Nero?",
-        - "What are the advantages of Nero?",
-        - "Who should read this?",
-        - "What are the processes of Nero?",
-        - "What is Nero Master?",
-        - "Give me a list of reasons why Marketing should become Agile?"")
+# Display "Try these questions" in a box
+with st.container():
+    st.markdown("### Try these questions")
+    
+    questions = [
+        "What is Nero?",
+        "Why is it called Nero?",
+        "What are the advantages of Nero?",
+        "Who should read this?",
+        "What are the processes of Nero?",
+        "What is Nero Master?",
+        "Give me a list of reasons why Marketing should become Agile?"
+    ]
+    
+    # Shuffle the questions in random order
+    random.shuffle(questions)
+    
+    for q in questions:
+        st.text(q)
+        time.sleep(2)
