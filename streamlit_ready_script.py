@@ -64,6 +64,7 @@ if response == "I don't know":
     response = "The info you asked is not part of my training dataset"
 
 st.text("Here is the answer:")
+st.markdown("**Here is the answer:**", unsafe_allow_html=True)
 st.write(response)
 
 st.markdown("""
