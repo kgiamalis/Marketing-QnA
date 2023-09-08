@@ -28,6 +28,10 @@ body {
 """
 st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
+# Streamlit app title and introduction
+st.title("Agile Marketing Q&A")
+st.write("Ask your question and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
+
 # Fetch the API key from Streamlit secrets
 api_key = st.secrets["openai"]["openai_api_key"]
 
@@ -60,10 +64,8 @@ response = index.query(query)
 
 st.write(response)
 
-# Streamlit app title and introduction
-st.title("Agile Marketing Q&A")
-st.write("Ask your question and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
-st.Markdown("What is Nero?",'\n'
+
+st.write("You can try one of he following questions" '/n' "What is Nero?",'\n'
              "Why is it called Nero?",'\n'
              "What are the advantages of Nero?",'\n'
              "Who should read this?",'\n'
