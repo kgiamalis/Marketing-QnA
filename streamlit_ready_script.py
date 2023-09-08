@@ -57,7 +57,7 @@ index = VectorstoreIndexCreator(
 st.markdown("**Ask your question:**", unsafe_allow_html=True)
 
 # User Input for the question
-query = st.text_input(key="unique_query_key")
+query = st.text_input(" ",key="unique_query_key")
 
 # Generate response
 response = index.query(query)
