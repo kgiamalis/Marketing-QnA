@@ -29,9 +29,9 @@ body {
 
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
-st.write("Ask your question and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
+st.write(".")
 
-st.markdown("""
+st.markdown(""" Ask your question and get answers based on my book: Agile Marketing -from waterfall to water flow-. 
 You can try one of the following questions:
 - What is Nero?
 - Why is it called Nero?
