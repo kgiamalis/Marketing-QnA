@@ -35,10 +35,8 @@ api_key = st.secrets["openai"]["openai_api_key"]
 if not api_key:
     raise ValueError("OpenAI API key not found!")
 
-# Account for deprecation of LLM model by setting the model based on the current date
-current_date = datetime.datetime.now().date()
-target_date = datetime.date(2024, 6, 12)
-llm_model = "gpt-3.5-turbo" if current_date > target_date else "gpt-3.5-turbo-0301"
+
+llm_model = "gpt-3.5-turbo"
 
 # Load your file
 file = 'cleaned_updated_manual_sample.csv'
