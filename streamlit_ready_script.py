@@ -53,18 +53,15 @@ index = VectorstoreIndexCreator(
     vectorstore_cls=DocArrayInMemorySearch,
 ).from_loaders([loader])
 
-# Display the custom label for the input field
-st.markdown("**Ask your question:**", unsafe_allow_html=True)
-
 # User Input for the question
-query = st.text_input(" ",key="unique_query_key")
+query = st.text_input("Ask your question:",key="unique_query_key")
 
 # Generate response
 response = index.query(query)
 
 # Replace the default response (if this is the behavior of index.query)
 if response == "I don't know":
-    response = "The info you asked is not part of my training dataset"
+    response = "The info you asked is not part of my training dataset."
 
 # Display the "Here is the answer" text and response in the same block using markdown
 st.markdown(f"**Here is the answer:**\n\n{response}", unsafe_allow_html=True)
