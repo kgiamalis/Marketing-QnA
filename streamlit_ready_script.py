@@ -39,15 +39,12 @@ api_key = st.secrets["openai"]["openai_api_key"]
 if not api_key:
     raise ValueError("OpenAI API key not found!")
 
-
+#Add LLM
 llm_model = "gpt-3.5-turbo"
 
 # Load your file
 file = 'cleaned_updated_manual_sample.csv'
 loader = CSVLoader(file_path=file, encoding='utf-8')
-
-# Fetch the API key from Streamlit's secrets
-api_key = st.secrets["openai"]["openai_api_key"]
 
 # Set the OpenAI API key as an environment variable
 os.environ["OPENAI_API_KEY"] = api_key
@@ -58,6 +55,12 @@ index = VectorstoreIndexCreator(
 
 # User Input for the question
 query = st.text_input("Ask your question:", key="unique_query_key")
+
+# Check if the user has provided input
+if query:
+    # Generate response
+    response = index.query(query)
+    st.write(response)
 
 # Generate response
 response = index.query(query)
