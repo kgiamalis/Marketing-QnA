@@ -56,6 +56,13 @@ index = VectorstoreIndexCreator(
 # User Input for the question
 query = st.text_input("Ask your question:", key="unique_query_key",)
 
+# Display the custom label for the input field
+st.markdown("**Ask your question:**", unsafe_allow_html=True)
+
+# Use st.text_input without a label to capture user input
+query = st.text_input("", key="unique_query_key")
+
+
 # Generate response
 response = index.query(query)
 
@@ -63,10 +70,8 @@ response = index.query(query)
 if response == "I don't know":
     response = "The info you asked is not part of my training dataset"
 
-st.text("Here is the answer:")
 # Display the "Here is the answer" text and response in the same block using markdown
 st.markdown(f"**Here is the answer:**\n\n{response}", unsafe_allow_html=True)
-st.write(response)
 
 st.markdown("""
 You can try one of the following questions:
