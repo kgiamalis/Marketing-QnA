@@ -59,6 +59,11 @@ query = st.text_input("Ask your question:", key="unique_query_key",)
 # Generate response
 response = index.query(query)
 
+# Replace the default response (if this is the behavior of index.query)
+if response == "I don't know":
+response = "The info you asked is not part of my training dataset"
+
+st.text("Here is the answer:")
 st.write(response)
 
 st.markdown("""
