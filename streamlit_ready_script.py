@@ -29,7 +29,6 @@ body {
 
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
-st.write(".")
 
 st.markdown(""" Ask your question and get answers based on my book: Agile Marketing -from waterfall to water flow-. 
 You can try one of the following questions:
