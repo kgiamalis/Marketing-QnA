@@ -31,6 +31,17 @@ body {
 st.title("Agile Marketing Q&A")
 st.write("Ask your question and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
 
+st.markdown("""
+You can try one of the following questions:
+- What is Nero?
+- Why is it called Nero?
+- What are the advantages of Nero?
+- Who should read this?
+- What are the processes of Nero?
+- What is Nero Master?
+- Give me a list of reasons why Marketing should become Agile?
+""")
+
 # Fetch the API key from Streamlit secrets
 api_key = st.secrets["openai"]["openai_api_key"]
 
@@ -65,13 +76,3 @@ if response == "I don't know":
 # Display the "Here is the answer" text and response in the same block using markdown
 st.markdown(f"**Here is the answer:**\n\n{response}", unsafe_allow_html=True)
 
-st.markdown("""
-You can try one of the following questions:
-- What is Nero?
-- Why is it called Nero?
-- What are the advantages of Nero?
-- Who should read this?
-- What are the processes of Nero?
-- What is Nero Master?
-- Give me a list of reasons why Marketing should become Agile?
-""")
