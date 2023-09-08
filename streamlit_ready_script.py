@@ -56,12 +56,6 @@ index = VectorstoreIndexCreator(
 # User Input for the question
 query = st.text_input("Ask your question:", key="unique_query_key",)
 
-# Check if the user has provided non-empty input (strip removes whitespace)
-if query and query.strip():
-    # Generate response
-    response = index.query(query)
-    st.write(response)
-
 # Generate response
 response = index.query(query)
 
