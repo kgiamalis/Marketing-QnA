@@ -59,10 +59,6 @@ query = st.text_input("Ask your question:", key="unique_query_key",)
 # Display the custom label for the input field
 st.markdown("**Ask your question:**", unsafe_allow_html=True)
 
-# Use st.text_input without a label to capture user input
-query = st.text_input("", key="unique_query_key")
-
-
 # Generate response
 response = index.query(query)
 
