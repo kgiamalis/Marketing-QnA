@@ -64,11 +64,13 @@ response = index.query(query)
 
 st.write(response)
 
-
-st.write("You can try one of he following questions" '/n' "What is Nero?",'\n'
-             "Why is it called Nero?",'\n'
-             "What are the advantages of Nero?",'\n'
-             "Who should read this?",'\n'
-             "What are the processes of Nero?",'\n'
-             "What is Nero Master?",'\n'
-             "Give me a list of reasons why Marketing should become Agile?")
+st.markdown("""
+You can try one of the following questions:
+- What is Nero?
+- Why is it called Nero?
+- What are the advantages of Nero?
+- Who should read this?
+- What are the processes of Nero?
+- What is Nero Master?
+- Give me a list of reasons why Marketing should become Agile?
+""")
