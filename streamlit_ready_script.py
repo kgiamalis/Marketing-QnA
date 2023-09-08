@@ -75,5 +75,19 @@ if response == "I don't know":
 # Display the "Here is the answer" text and response in the same block using markdown
 st.markdown(f"**Here is the answer:**\n\n{response}", unsafe_allow_html=True)
 
-link = ('[Buy My Book](https://www.amazon.de/-/en/Konstantinos-Giamalis/dp/6180023735/?&_encoding=UTF8&tag=kgiamalis-21&linkCode=ur2&linkId=ba4eaff10ab7d658db964e48125abc7d&camp=1638&creative=6742)')
-st.markdown(link, unsafe_allow_html=True)
+# Add a horizontal line as a divider
+st.markdown('---')
+
+# Add some space
+st.write('\n')
+
+# Add "Buy My Book" and "Feedback Form" links side by side
+buy_book_link = ('<a href="https://www.amazon.de/-/en/Konstantinos-Giamalis/dp/6180023735/?&_encoding=UTF8&tag=kgiamalis-21&linkCode=ur2&linkId=ba4eaff10ab7d658db964e48125abc7d&camp=1638&creative=6742" target="_blank">'
+                 '<button style="background-color:#0079bf; color:white; border-radius:8px; padding:8px 15px; margin-right:10px;">Buy My Book</button>'
+                 '</a>')
+
+feedback_form_link = ('<a href="https://forms.gle/S8zK7dRR6sKAoUe97" target="_blank">'
+                      '<button style="background-color:#0079bf; color:white; border-radius:8px; padding:8px 15px;">Feedback Form</button>'
+                      '</a>')
+
+st.markdown(buy_book_link + feedback_form_link, unsafe_allow_html=True)
