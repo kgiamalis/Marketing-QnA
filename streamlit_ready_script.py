@@ -82,12 +82,8 @@ st.markdown('---')
 st.write('\n')
 
 # Add "Buy My Book" and "Feedback Form" links side by side
-buy_book_link = ('<a href="https://www.amazon.de/-/en/Konstantinos-Giamalis/dp/6180023735/?&_encoding=UTF8&tag=kgiamalis-21&linkCode=ur2&linkId=ba4eaff10ab7d658db964e48125abc7d&camp=1638&creative=6742" target="_blank">'
-                 '<button style="background-color:#0079bf; color:white; border-radius:8px; padding:8px 15px; margin-right:10px;">Buy My Book</button>'
-                 '</a>')
+buy_book_link = '[Buy the book](https://www.amazon.de/-/en/Konstantinos-Giamalis/dp/6180023735/?&_encoding=UTF8&tag=kgiamalis-21&linkCode=ur2&linkId=ba4eaff10ab7d658db964e48125abc7d&camp=1638&creative=6742)'
+feedback_form_link = '[Feedback form](https://forms.gle/S8zK7dRR6sKAoUe97)'
 
-feedback_form_link = ('<a href="https://forms.gle/S8zK7dRR6sKAoUe97" target="_blank">'
-                      '<button style="background-color:#0079bf; color:white; border-radius:8px; padding:8px 15px;">Feedback Form</button>'
-                      '</a>')
-
-st.markdown(buy_book_link + feedback_form_link, unsafe_allow_html=True)
+# Display the links
+st.markdown(f"{buy_book_link} &nbsp;&nbsp;&nbsp;&nbsp; {feedback_form_link}", unsafe_allow_html=True)
