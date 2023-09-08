@@ -64,7 +64,8 @@ if response == "I don't know":
     response = "The info you asked is not part of my training dataset"
 
 st.text("Here is the answer:")
-st.markdown("**Here is the answer:**", unsafe_allow_html=True)
+# Display the "Here is the answer" text and response in the same block using markdown
+st.markdown(f"**Here is the answer:**\n\n{response}", unsafe_allow_html=True)
 st.write(response)
 
 st.markdown("""
