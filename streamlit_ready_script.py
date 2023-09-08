@@ -54,7 +54,7 @@ index = VectorstoreIndexCreator(
 ).from_loaders([loader])
 
 # User Input for the question
-query = st.text_input("Ask your question:", key="unique_query_key", value=None)
+query = st.text_input("Ask your question:", key="unique_query_key",)
 
 # Check if the user has provided input
 if query:
