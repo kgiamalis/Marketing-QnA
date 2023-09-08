@@ -15,7 +15,7 @@ body {
 }
 .stMarkdown {
     background-color: #ffffff;
-    padding: 16px;
+    padding: 8px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
@@ -27,20 +27,6 @@ body {
 }
 """
 st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
-
-# Streamlit app title and introduction
-st.title("Agile Marketing Q&A")
-st.write("Ask your question and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
-st.write("What is Nero?",'\n'
-             "Why is it called Nero?",'\n'
-             "What are the advantages of Nero?",'\n'
-             "Who should read this?",'\n'
-             "What are the processes of Nero?",'\n'
-             "What is Nero Master?",'\n'
-             "Give me a list of reasons why Marketing should become Agile?")
-
-# User Input for the question
-query = st.text_input("Ask your question:", key="unique_query_key")
 
 # Fetch the API key from Streamlit secrets
 api_key = st.secrets["openai"]["openai_api_key"]
@@ -68,7 +54,21 @@ index = VectorstoreIndexCreator(
     vectorstore_cls=DocArrayInMemorySearch,
 ).from_loaders([loader])
 
+# User Input for the question
+query = st.text_input("Ask your question:", key="unique_query_key")
+
 # Generate response
 response = index.query(query)
 
 st.write(response)
+
+# Streamlit app title and introduction
+st.title("Agile Marketing Q&A")
+st.write("Ask your question and get answers based on the book: Agile Marketing -from waterfall to water flow-.")
+st.Markdown("What is Nero?",'\n'
+             "Why is it called Nero?",'\n'
+             "What are the advantages of Nero?",'\n'
+             "Who should read this?",'\n'
+             "What are the processes of Nero?",'\n'
+             "What is Nero Master?",'\n'
+             "Give me a list of reasons why Marketing should become Agile?")
