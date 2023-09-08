@@ -26,7 +26,6 @@ body {
     border: none;
 }
 """
-st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
 # Streamlit app title and introduction
 st.title("Agile Marketing Q&A")
