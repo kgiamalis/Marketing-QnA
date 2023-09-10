@@ -81,6 +81,13 @@ st.markdown('---')
 # Add some space
 st.write('\n')
 
+# FAQs Section
+st.header("Frequently Asked Questions (FAQs)")
+
+# Sample FAQ
+with st.beta_expander("What is this application about?"):
+    st.write("It's about questions and answers based on the book I wrote in 2017 about Agile Marketing.")
+
 # Add "Buy My Book" and "Feedback Form" links side by side
 buy_book_link = '[Buy the book](https://www.amazon.de/-/en/Konstantinos-Giamalis/dp/6180023735/?&_encoding=UTF8&tag=kgiamalis-21&linkCode=ur2&linkId=ba4eaff10ab7d658db964e48125abc7d&camp=1638&creative=6742)'
 feedback_form_link = '[Feedback form](https://forms.gle/S8zK7dRR6sKAoUe97)'
